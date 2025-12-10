@@ -9,4 +9,4 @@ router.get('/', filmController.index);
 router.get('/:id', filmController.show);
 
 
-module.exports = { index }
+module.exports = router

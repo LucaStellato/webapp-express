@@ -5,3 +5,10 @@ function index(req, res) {
     if (err) return res.status(500).json({ error: 'database failed' })
     res.json(results)
 }
+
+function show(req, res) {
+    c
+}
+
+
+module.exports = { index }
