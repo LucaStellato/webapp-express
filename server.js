@@ -12,6 +12,7 @@ app.use(cors({
     origin: 'http://localhost:5173'
 }))
 
+app.use('/images', express.static('public/assets/img'))
 
 app.get('/', (req, res) => {
     res.send('SERVER IS ACTIVE')
