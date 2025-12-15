@@ -27,6 +27,7 @@ function show(req, res) {
 const storeReview = (res, req) => {
     const movieId = Number(req.params.id)
     const { name, vote, text } = req.body
+    const query = "INSERT INTO reviews (movie_id, name, rating, text) VALUES (?,?,?,?)"
 }
 
 module.exports = { index, show };
