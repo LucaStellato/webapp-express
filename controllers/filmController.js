@@ -24,12 +24,12 @@ function show(req, res) {
     });
 }
 
-const storeReview = (res, req) => {
+const storeReview = (req, res) => {
     const movieId = Number(req.params.id)
     const { name, vote, text } = req.body
-    const query = "INSERT INTO reviews (movie_id, name, rating, text) VALUES (?,?,?,?)"
-    console.log(movieId, name, text, rating)
-    connection.query(sql, [movieId, name, text, rating], (err, reaults) => {
+    const query = "INSERT INTO reviews (movie_id, name, vote, text) VALUES (?,?,?,?)"
+    console.log(movieId, name, text, vote)
+    connection.query(query, [movieId, name, vote, text], (err, reaults) => {
         if (err) return res.status(500).json({ error: true, message: err.message })
         res.status(201).json({ message: "review create" })
     })
