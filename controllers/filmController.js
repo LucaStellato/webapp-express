@@ -35,4 +35,4 @@ const storeReview = (res, req) => {
     })
 }
 
-module.exports = { index, show };
+module.exports = { index, show, storeReview };
